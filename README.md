@@ -21,3 +21,13 @@ sed -e s/APP_KEY=/APP_KEY=base64:R8pVxgXih7oMjNIwcBrsTQX9iHRPN7+b1M0UxXZ0C+U=/ -
 docker run --rm -v $PWD:/usr/src/app -w /usr/src/app node npm install
 docker run --rm -v $PWD:/usr/src/app -w /usr/src/app node npm run dev
 ```
+
+# env
+```
+docker --version
+Docker version 20.10.5, build 55c4c88
+```
+```
+docker-compose --version
+docker-compose version 1.29.0, build 07737305
+```
