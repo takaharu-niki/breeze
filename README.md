@@ -3,15 +3,33 @@ laravel breeze
 
 # use
 ```
-docker-compose exec php composer create-project --prefer-dist laravel/laravel .
+mkdir hoge
+cd hoge
 ```
 
 ```
-docker-compose exec php composer require laravel/breeze --dev
+git clone https://github.com/takaharu-niki/breeze.git
 ```
 
 ```
-docker-compose exec php php artisan breeze:install
+mkdir db
+```
+
+```
+docker-compose up --build -d
+```
+
+```
+docker-compose exec php composer install
+```
+
+```
+cd src/laravel
+sed -e s/DB_HOST=127.0.0.1/DB_HOST=mysql/ -e s/DB_PASSWORD=/DB_PASSWORD=password/ .env.example  > .env
+```
+
+```
+docker-compose exec php php artisan key:generate
 ```
 
 ```
@@ -22,6 +40,12 @@ docker-compose exec php npm install
 docker-compose exec php npm run dev
 ```
 
+# env
 ```
-docker-compose exec php php artisan migrate
+docker --version
+Docker version 20.10.5, build 55c4c88
+```
+```
+docker-compose --version
+docker-compose version 1.29.0, build 07737305
 ```
