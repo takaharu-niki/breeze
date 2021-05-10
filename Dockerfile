@@ -4,3 +4,5 @@ RUN docker-php-ext-install pdo_mysql && docker-php-ext-enable pdo_mysql
 
 COPY --from=composer /usr/bin/composer /usr/bin/composer
 RUN apk --update add npm
+
+WORKDIR /var/www/html/laravel
